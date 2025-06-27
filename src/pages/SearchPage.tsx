@@ -4,7 +4,7 @@ import { Student, StudentData, PinyinTable, Grade } from "../types";
 
 const SearchPage: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState("");
-  const [searchType, setSearchType] = useState<"auto" | "xh" | "xm">("auto");
+  const [searchType] = useState<"auto" | "xh" | "xm">("auto");
   const [selectedGrade, setSelectedGrade] = useState<Grade | "all">("all");
   const [results, setResults] = useState<Student[]>([]);
   const [isLoading, setIsLoading] = useState(false);
@@ -157,6 +157,11 @@ const SearchPage: React.FC = () => {
     setResults(uniqueResults);
     setIsLoading(false);
   }, [searchTerm, searchType, selectedGrade, studentsData, pinyinTable]);
+
+  // 触发搜索
+  useEffect(() => {
+    performSearch;
+  }, [performSearch]);
 
   return (
     <div className="max-w-4xl mx-auto space-y-8">

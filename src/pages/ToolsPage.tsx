@@ -3,7 +3,6 @@ import {
   ExternalLink,
   Code,
   Github,
-  Coffee,
   Sheet,
   Book,
   Dog,
