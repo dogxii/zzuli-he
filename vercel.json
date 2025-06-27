@@ -10,18 +10,6 @@
       }
     }
   ],
-  "routes": [
-    {
-      "src": "/example/(.*)",
-      "headers": {
-        "Cache-Control": "public, max-age=86400"
-      }
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/index.html"
-    }
-  ],
   "headers": [
     {
       "source": "/(.*)",
