@@ -31,7 +31,7 @@ const SearchPage: React.FC = () => {
             // const response = await fetch(`/example/${year}.json`);
             // 改为 jsdelvr cdn 请求访问
             const response = await fetch(
-              `https://fastly.jsdelivr.net/gh/dogyyds/zzuli-he@main/public/example/${year}.json`
+              `https://fastly.jsdelivr.net/gh/dogxii/zzuli-he@main/public/example/${year}.json`
             );
             const yearData: StudentData = await response.json();
             data[year] = yearData.aaData || [];

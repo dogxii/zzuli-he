@@ -1,12 +1,5 @@
 import React from "react";
-import {
-  ExternalLink,
-  Code,
-  Github,
-  Sheet,
-  Book,
-  Dog,
-} from "lucide-react";
+import { ExternalLink, Code, Github, Sheet, Book, Dog } from "lucide-react";
 
 const ToolsPage: React.FC = () => {
   const tools = [
@@ -48,7 +41,7 @@ const ToolsPage: React.FC = () => {
 
           <div className="flex justify-center space-x-6">
             <a
-              href="https://github.com/dogyyds"
+              href="https://github.com/dogxii"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center space-x-2 text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors"
