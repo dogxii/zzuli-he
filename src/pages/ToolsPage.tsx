@@ -32,8 +32,7 @@ const ToolsPage: React.FC = () => {
             <p className="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
               方便快捷查询学生信息的网页，以检验是否为本校(zzuli)学生。<br></br>
               请勿用于非法用途。<br></br>
-              (文件采用 jsdelivr cdn 代理，可能出现无法搜索问题)<br></br> by
-              Dogxi
+              (文件采用 jsdelivr cdn 代理，无法搜索请刷新)<br></br> by Dogxi
             </p>
             <p className="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto"></p>
             <p className="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto"></p>
