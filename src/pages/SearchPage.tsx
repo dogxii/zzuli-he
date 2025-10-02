@@ -30,8 +30,12 @@ const SearchPage: React.FC = () => {
           try {
             // const response = await fetch(`/example/${year}.json`);
             // 改为 jsdelvr cdn 请求访问
+            // const response = await fetch(
+            //   `https://fastly.jsdelivr.net/gh/dogxii/zzuli-he@main/public/example/${year}.json`
+            // );
+            // 改为 国内 cdn 加速访问
             const response = await fetch(
-              `https://fastly.jsdelivr.net/gh/dogxii/zzuli-he@main/public/example/${year}.json`
+              `https://cdn.jsdmirror.com/gh/dogxii/zzuli-he@main/public/example/${year}.json`,
             );
             const yearData: StudentData = await response.json();
             data[year] = yearData.aaData || [];
@@ -110,7 +114,7 @@ const SearchPage: React.FC = () => {
         } else {
           // 部分学号模糊匹配
           const partialResults = yearData.filter((student) =>
-            student.XH.includes(term)
+            student.XH.includes(term),
           );
           searchResults.push(...partialResults);
         }
@@ -120,7 +124,7 @@ const SearchPage: React.FC = () => {
       ) {
         // 姓名搜索（模糊匹配）
         const nameResults = yearData.filter((student) =>
-          student.XM.includes(term)
+          student.XM.includes(term),
         );
         searchResults.push(...nameResults);
       } else if (
@@ -140,7 +144,7 @@ const SearchPage: React.FC = () => {
           (student) =>
             student.XM.includes(term) ||
             student.XH.includes(term) ||
-            student.BJMC.includes(term)
+            student.BJMC.includes(term),
         );
         searchResults.push(...fullTextResults);
       }
@@ -150,7 +154,7 @@ const SearchPage: React.FC = () => {
     const uniqueResults = searchResults
       .filter(
         (student, index, self) =>
-          index === self.findIndex((s) => s.XH === student.XH)
+          index === self.findIndex((s) => s.XH === student.XH),
       )
       .slice(0, 30); // 最多显示30条
 
