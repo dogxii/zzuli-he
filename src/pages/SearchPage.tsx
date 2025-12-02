@@ -220,7 +220,7 @@ const SearchPage: React.FC = () => {
         <div className="bg-white/70 dark:bg-gray-800/70 backdrop-blur-sm rounded-xl border border-white/20 dark:border-gray-700/20 overflow-hidden shadow-lg">
           <div className="p-4 bg-gray-50/50 dark:bg-gray-700/50 border-b border-gray-200/50 dark:border-gray-600/50">
             <span className="text-sm text-gray-600 dark:text-gray-300">
-              找到 {results.length} 条记录
+              找到 {results.length >= 50 ? "50+" : results.length} 条记录
             </span>
           </div>
 
