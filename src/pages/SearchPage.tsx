@@ -156,7 +156,7 @@ const SearchPage: React.FC = () => {
         (student, index, self) =>
           index === self.findIndex((s) => s.XH === student.XH),
       )
-      .slice(0, 30); // 最多显示30条
+      .slice(0, 50); // 最多显示50条
 
     setResults(uniqueResults);
     setIsLoading(false);
