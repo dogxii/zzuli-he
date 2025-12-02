@@ -23,7 +23,7 @@ const SearchPage: React.FC = () => {
         setPinyinTable(pinyinData);
 
         // 加载学生数据
-        const years = ["2021", "2022", "2023", "2024"];
+        const years = ["2021", "2022", "2023", "2024", "2025"];
         const data: { [key: string]: Student[] } = {};
 
         for (const year of years) {
@@ -92,7 +92,7 @@ const SearchPage: React.FC = () => {
     // 确定搜索范围
     const yearsToSearch =
       selectedGrade === "all"
-        ? ["2021", "2022", "2023", "2024"]
+        ? ["2021", "2022", "2023", "2024", "2025"]
         : [`20${selectedGrade}`];
 
     for (const year of yearsToSearch) {
@@ -201,6 +201,7 @@ const SearchPage: React.FC = () => {
             className="px-3 py-2 border border-gray-200 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 bg-white/80 dark:bg-gray-700/80 text-gray-900 dark:text-white text-sm"
           >
             <option value="all">全部年级</option>
+            <option value="25">2025级</option>
             <option value="24">2024级</option>
             <option value="23">2023级</option>
             <option value="22">2022级</option>
