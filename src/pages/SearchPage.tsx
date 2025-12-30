@@ -174,8 +174,10 @@ const SearchPage: React.FC = () => {
         <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-2">
           🔍 学生查询
         </h1>
-        <p className="text-gray-600 dark:text-gray-300">
+        <p className="text-gray-600 dark:text-gray-300">				
           输入学号、姓名或拼音首字母
+          <br />
+          (搜索不出来请刷新)
         </p>
       </div>
 
@@ -189,7 +191,7 @@ const SearchPage: React.FC = () => {
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
               placeholder="输入查询内容..."
-              className="w-full pl-10 pr-4 py-3 border border-gray-200 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white/80 dark:bg-gray-700/80 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400"
+              className="w-full pl-10 pr-4 py-3 text-base border border-gray-200 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white/80 dark:bg-gray-700/80 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400"
             />
           </div>
 
