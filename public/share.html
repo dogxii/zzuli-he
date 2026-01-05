@@ -1,0 +1,519 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZZULI 姓名统计</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 40px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 24px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 32px;
+            margin-bottom: 8px;
+        }
+
+        .header p {
+            opacity: 0.9;
+            font-size: 16px;
+        }
+
+        .total-badge {
+            display: inline-block;
+            background: rgba(255,255,255,0.2);
+            padding: 12px 24px;
+            border-radius: 50px;
+            margin-top: 20px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .content {
+            padding: 30px;
+        }
+
+        .section {
+            margin-bottom: 30px;
+        }
+
+        .section-title {
+            font-size: 18px;
+            font-weight: 600;
+            color: #1f2937;
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+            margin-bottom: 30px;
+        }
+
+        .stat-card {
+            background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+            border-radius: 16px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .stat-card.pink {
+            background: linear-gradient(135deg, #fdf2f8 0%, #fce7f3 100%);
+        }
+
+        .stat-card.green {
+            background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+        }
+
+        .stat-value {
+            font-size: 28px;
+            font-weight: bold;
+            color: #1f2937;
+        }
+
+        .stat-label {
+            font-size: 14px;
+            color: #6b7280;
+            margin-top: 4px;
+        }
+
+        .ranking-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .ranking-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            background: #f3f4f6;
+            padding: 8px 16px;
+            border-radius: 50px;
+        }
+
+        .ranking-item.gold {
+            background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+        }
+
+        .ranking-item.silver {
+            background: linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%);
+        }
+
+        .ranking-item.bronze {
+            background: linear-gradient(135deg, #fed7aa 0%, #fdba74 100%);
+        }
+
+        .ranking-number {
+            font-size: 12px;
+            font-weight: bold;
+            color: #6b7280;
+            width: 20px;
+        }
+
+        .ranking-name {
+            font-weight: 600;
+            color: #1f2937;
+        }
+
+        .ranking-count {
+            font-size: 12px;
+            color: #6b7280;
+        }
+
+        .char-cloud {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            justify-content: center;
+        }
+
+        .char-item {
+            padding: 8px 16px;
+            border-radius: 12px;
+            font-weight: bold;
+            color: white;
+        }
+
+        .char-item.size-1 { font-size: 32px; background: #4f46e5; }
+        .char-item.size-2 { font-size: 28px; background: #7c3aed; }
+        .char-item.size-3 { font-size: 24px; background: #8b5cf6; }
+        .char-item.size-4 { font-size: 20px; background: #a78bfa; }
+        .char-item.size-5 { font-size: 16px; background: #c4b5fd; color: #4f46e5; }
+
+        .gender-bar {
+            height: 24px;
+            border-radius: 12px;
+            overflow: hidden;
+            display: flex;
+            margin-top: 12px;
+        }
+
+        .gender-male {
+            background: linear-gradient(90deg, #3b82f6 0%, #60a5fa 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+        .gender-female {
+            background: linear-gradient(90deg, #ec4899 0%, #f472b6 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+        .interesting-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .tag {
+            background: linear-gradient(135deg, #fdf4ff 0%, #fae8ff 100%);
+            color: #a855f7;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 14px;
+        }
+
+        .footer {
+            background: #f9fafb;
+            padding: 24px;
+            text-align: center;
+            border-top: 1px solid #e5e7eb;
+        }
+
+        .footer-url {
+            font-size: 20px;
+            font-weight: bold;
+            color: #4f46e5;
+            text-decoration: none;
+        }
+
+        .footer-desc {
+            font-size: 14px;
+            color: #6b7280;
+            margin-top: 8px;
+        }
+
+        .qr-hint {
+            margin-top: 12px;
+            font-size: 12px;
+            color: #9ca3af;
+        }
+
+        .two-col {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📊 ZZULI 姓名统计报告</h1>
+            <p>郑州轻工业大学学生姓名数据分析</p>
+            <div class="total-badge">
+                👥 38,093 名学生
+            </div>
+        </div>
+
+        <div class="content">
+            <!-- 核心统计 -->
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-value">♂ 60.4%</div>
+                    <div class="stat-label">男生 22,996人</div>
+                </div>
+                <div class="stat-card pink">
+                    <div class="stat-value">♀ 39.6%</div>
+                    <div class="stat-label">女生 15,097人</div>
+                </div>
+                <div class="stat-card green">
+                    <div class="stat-value">84.5%</div>
+                    <div class="stat-label">独特名字 32,186人</div>
+                </div>
+            </div>
+
+            <!-- 性别比例条 -->
+            <div class="section">
+                <div class="section-title">⚖️ 男女比例 1.52:1</div>
+                <div class="gender-bar">
+                    <div class="gender-male" style="width: 60.4%">
+                        男 60.4%
+                    </div>
+                    <div class="gender-female" style="width: 39.6%">
+                        女 39.6%
+                    </div>
+                </div>
+            </div>
+
+            <div class="two-col">
+                <!-- 姓氏排行 -->
+                <div class="section">
+                    <div class="section-title">👑 姓氏排行 TOP 10</div>
+                    <div class="ranking-list">
+                        
+                            <div class="ranking-item gold">
+                                <span class="ranking-number">1</span>
+                                <span class="ranking-name">王</span>
+                                <span class="ranking-count">3508人</span>
+                            </div>
+                        
+                            <div class="ranking-item silver">
+                                <span class="ranking-number">2</span>
+                                <span class="ranking-name">李</span>
+                                <span class="ranking-count">3253人</span>
+                            </div>
+                        
+                            <div class="ranking-item bronze">
+                                <span class="ranking-number">3</span>
+                                <span class="ranking-name">张</span>
+                                <span class="ranking-count">3205人</span>
+                            </div>
+                        
+                            <div class="ranking-item ">
+                                <span class="ranking-number">4</span>
+                                <span class="ranking-name">刘</span>
+                                <span class="ranking-count">2091人</span>
+                            </div>
+                        
+                            <div class="ranking-item ">
+                                <span class="ranking-number">5</span>
+                                <span class="ranking-name">陈</span>
+                                <span class="ranking-count">1343人</span>
+                            </div>
+                        
+                            <div class="ranking-item ">
+                                <span class="ranking-number">6</span>
+                                <span class="ranking-name">杨</span>
+                                <span class="ranking-count">1211人</span>
+                            </div>
+                        
+                            <div class="ranking-item ">
+                                <span class="ranking-number">7</span>
+                                <span class="ranking-name">赵</span>
+                                <span class="ranking-count">1025人</span>
+                            </div>
+                        
+                            <div class="ranking-item ">
+                                <span class="ranking-number">8</span>
+                                <span class="ranking-name">郭</span>
+                                <span class="ranking-count">710人</span>
+                            </div>
+                        
+                            <div class="ranking-item ">
+                                <span class="ranking-number">9</span>
+                                <span class="ranking-name">周</span>
+                                <span class="ranking-count">640人</span>
+                            </div>
+                        
+                            <div class="ranking-item ">
+                                <span class="ranking-number">10</span>
+                                <span class="ranking-name">马</span>
+                                <span class="ranking-count">613人</span>
+                            </div>
+                        
+                    </div>
+                </div>
+
+                <!-- 重名排行 -->
+                <div class="section">
+                    <div class="section-title">👥 重名排行 TOP 10</div>
+                    <div class="ranking-list">
+                        
+                            <div class="ranking-item gold">
+                                <span class="ranking-number">1</span>
+                                <span class="ranking-name">王硕</span>
+                                <span class="ranking-count">23人</span>
+                            </div>
+                        
+                            <div class="ranking-item silver">
+                                <span class="ranking-number">2</span>
+                                <span class="ranking-name">王浩</span>
+                                <span class="ranking-count">21人</span>
+                            </div>
+                        
+                            <div class="ranking-item bronze">
+                                <span class="ranking-number">3</span>
+                                <span class="ranking-name">刘畅</span>
+                                <span class="ranking-count">18人</span>
+                            </div>
+                        
+                            <div class="ranking-item ">
+                                <span class="ranking-number">4</span>
+                                <span class="ranking-name">李硕</span>
+                                <span class="ranking-count">16人</span>
+                            </div>
+                        
+                            <div class="ranking-item ">
+                                <span class="ranking-number">5</span>
+                                <span class="ranking-name">王子涵</span>
+                                <span class="ranking-count">14人</span>
+                            </div>
+                        
+                            <div class="ranking-item ">
+                                <span class="ranking-number">6</span>
+                                <span class="ranking-name">李想</span>
+                                <span class="ranking-count">14人</span>
+                            </div>
+                        
+                            <div class="ranking-item ">
+                                <span class="ranking-number">7</span>
+                                <span class="ranking-name">王涵</span>
+                                <span class="ranking-count">13人</span>
+                            </div>
+                        
+                            <div class="ranking-item ">
+                                <span class="ranking-number">8</span>
+                                <span class="ranking-name">刘硕</span>
+                                <span class="ranking-count">13人</span>
+                            </div>
+                        
+                            <div class="ranking-item ">
+                                <span class="ranking-number">9</span>
+                                <span class="ranking-name">张硕</span>
+                                <span class="ranking-count">13人</span>
+                            </div>
+                        
+                            <div class="ranking-item ">
+                                <span class="ranking-number">10</span>
+                                <span class="ranking-name">王浩宇</span>
+                                <span class="ranking-count">13人</span>
+                            </div>
+                        
+                    </div>
+                </div>
+            </div>
+
+            <!-- 热门用字 -->
+            <div class="section">
+                <div class="section-title">🔤 最热门取名用字</div>
+                <div class="char-cloud">
+                    <span class="char-item size-1">宇</span><span class="char-item size-1">佳</span><span class="char-item size-1">文</span><span class="char-item size-2">子</span><span class="char-item size-2">雨</span><span class="char-item size-2">博</span><span class="char-item size-3">浩</span><span class="char-item size-3">豪</span><span class="char-item size-3">梦</span><span class="char-item size-4">杰</span><span class="char-item size-4">涵</span><span class="char-item size-4">怡</span><span class="char-item size-5">鑫</span><span class="char-item size-5">阳</span><span class="char-item size-5">欣</span>
+                </div>
+            </div>
+
+            <!-- 热门名字 -->
+            <div class="section">
+                <div class="section-title">📝 最受欢迎的名字 (不含姓)</div>
+                <div class="ranking-list">
+                    
+                        <div class="ranking-item gold">
+                            <span class="ranking-number">1</span>
+                            <span class="ranking-name">硕</span>
+                            <span class="ranking-count">121人</span>
+                        </div>
+                    
+                        <div class="ranking-item silver">
+                            <span class="ranking-number">2</span>
+                            <span class="ranking-name">浩</span>
+                            <span class="ranking-count">115人</span>
+                        </div>
+                    
+                        <div class="ranking-item bronze">
+                            <span class="ranking-number">3</span>
+                            <span class="ranking-name">鑫</span>
+                            <span class="ranking-count">91人</span>
+                        </div>
+                    
+                        <div class="ranking-item ">
+                            <span class="ranking-number">4</span>
+                            <span class="ranking-name">浩然</span>
+                            <span class="ranking-count">90人</span>
+                        </div>
+                    
+                        <div class="ranking-item ">
+                            <span class="ranking-number">5</span>
+                            <span class="ranking-name">子涵</span>
+                            <span class="ranking-count">87人</span>
+                        </div>
+                    
+                        <div class="ranking-item ">
+                            <span class="ranking-number">6</span>
+                            <span class="ranking-name">博文</span>
+                            <span class="ranking-count">86人</span>
+                        </div>
+                    
+                        <div class="ranking-item ">
+                            <span class="ranking-number">7</span>
+                            <span class="ranking-name">博</span>
+                            <span class="ranking-count">82人</span>
+                        </div>
+                    
+                        <div class="ranking-item ">
+                            <span class="ranking-number">8</span>
+                            <span class="ranking-name">帅</span>
+                            <span class="ranking-count">77人</span>
+                        </div>
+                    
+                        <div class="ranking-item ">
+                            <span class="ranking-number">9</span>
+                            <span class="ranking-name">宇航</span>
+                            <span class="ranking-count">75人</span>
+                        </div>
+                    
+                        <div class="ranking-item ">
+                            <span class="ranking-number">10</span>
+                            <span class="ranking-name">杰</span>
+                            <span class="ranking-count">70人</span>
+                        </div>
+                    
+                </div>
+            </div>
+
+            <!-- 有趣发现 -->
+            <div class="section">
+                <div class="section-title">✨ 有趣发现 - 叠字名</div>
+                <div class="interesting-tags">
+                    <span class="tag">高亭亭</span><span class="tag">庞冠冠</span><span class="tag">黄莉莉</span><span class="tag">董莹莹</span><span class="tag">杜一一</span><span class="tag">魏瑶瑶</span><span class="tag">秦菁菁</span><span class="tag">汪祯祯</span><span class="tag">杨盼盼</span><span class="tag">扶婷婷</span><span class="tag">李鑫鑫</span><span class="tag">王媛媛</span><span class="tag">刘洋洋</span><span class="tag">赵笑笑</span><span class="tag">卞欢欢</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <div class="footer-url">🔗 he.dogxi.me</div>
+            <div class="footer-desc">扫码或访问网址查看更多有趣统计</div>
+            <div class="qr-hint">数据更新于 2026-01-05</div>
+        </div>
+    </div>
+</body>
+</html>

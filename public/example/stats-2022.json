@@ -1,0 +1,1834 @@
+{
+  "generatedAt": "2026-01-05T13:55:46.943Z",
+  "label": "2022级",
+  "total": 6717,
+  "yearStats": null,
+  "gender": {
+    "male": 4367,
+    "female": 2350,
+    "ratio": "1.86",
+    "malePercent": "65.0",
+    "femalePercent": "35.0"
+  },
+  "surnames": [
+    {
+      "name": "王",
+      "count": 594
+    },
+    {
+      "name": "张",
+      "count": 547
+    },
+    {
+      "name": "李",
+      "count": 534
+    },
+    {
+      "name": "刘",
+      "count": 370
+    },
+    {
+      "name": "陈",
+      "count": 257
+    },
+    {
+      "name": "杨",
+      "count": 217
+    },
+    {
+      "name": "赵",
+      "count": 187
+    },
+    {
+      "name": "马",
+      "count": 122
+    },
+    {
+      "name": "吴",
+      "count": 118
+    },
+    {
+      "name": "郭",
+      "count": 116
+    },
+    {
+      "name": "孙",
+      "count": 108
+    },
+    {
+      "name": "周",
+      "count": 105
+    },
+    {
+      "name": "黄",
+      "count": 98
+    },
+    {
+      "name": "胡",
+      "count": 88
+    },
+    {
+      "name": "朱",
+      "count": 86
+    },
+    {
+      "name": "高",
+      "count": 77
+    },
+    {
+      "name": "徐",
+      "count": 74
+    },
+    {
+      "name": "韩",
+      "count": 67
+    },
+    {
+      "name": "宋",
+      "count": 63
+    },
+    {
+      "name": "郑",
+      "count": 58
+    },
+    {
+      "name": "魏",
+      "count": 53
+    },
+    {
+      "name": "许",
+      "count": 48
+    },
+    {
+      "name": "曹",
+      "count": 47
+    },
+    {
+      "name": "田",
+      "count": 43
+    },
+    {
+      "name": "任",
+      "count": 43
+    },
+    {
+      "name": "程",
+      "count": 42
+    },
+    {
+      "name": "何",
+      "count": 42
+    },
+    {
+      "name": "梁",
+      "count": 42
+    },
+    {
+      "name": "崔",
+      "count": 38
+    },
+    {
+      "name": "闫",
+      "count": 38
+    },
+    {
+      "name": "冯",
+      "count": 37
+    },
+    {
+      "name": "董",
+      "count": 36
+    },
+    {
+      "name": "范",
+      "count": 36
+    },
+    {
+      "name": "贾",
+      "count": 35
+    },
+    {
+      "name": "罗",
+      "count": 35
+    },
+    {
+      "name": "袁",
+      "count": 35
+    },
+    {
+      "name": "蔡",
+      "count": 34
+    },
+    {
+      "name": "侯",
+      "count": 34
+    },
+    {
+      "name": "吕",
+      "count": 34
+    },
+    {
+      "name": "杜",
+      "count": 33
+    },
+    {
+      "name": "谢",
+      "count": 33
+    },
+    {
+      "name": "卢",
+      "count": 32
+    },
+    {
+      "name": "丁",
+      "count": 32
+    },
+    {
+      "name": "于",
+      "count": 31
+    },
+    {
+      "name": "苏",
+      "count": 31
+    },
+    {
+      "name": "邓",
+      "count": 30
+    },
+    {
+      "name": "史",
+      "count": 29
+    },
+    {
+      "name": "石",
+      "count": 29
+    },
+    {
+      "name": "林",
+      "count": 28
+    },
+    {
+      "name": "肖",
+      "count": 28
+    }
+  ],
+  "rareNames": [
+    {
+      "name": "甘",
+      "count": 3
+    },
+    {
+      "name": "栗",
+      "count": 3
+    },
+    {
+      "name": "逯",
+      "count": 3
+    },
+    {
+      "name": "景",
+      "count": 3
+    },
+    {
+      "name": "禹",
+      "count": 3
+    },
+    {
+      "name": "臧",
+      "count": 3
+    },
+    {
+      "name": "管",
+      "count": 3
+    },
+    {
+      "name": "章",
+      "count": 3
+    },
+    {
+      "name": "蓝",
+      "count": 3
+    },
+    {
+      "name": "单",
+      "count": 3
+    },
+    {
+      "name": "商",
+      "count": 3
+    },
+    {
+      "name": "向",
+      "count": 3
+    },
+    {
+      "name": "阮",
+      "count": 3
+    },
+    {
+      "name": "惠",
+      "count": 3
+    },
+    {
+      "name": "梅",
+      "count": 3
+    },
+    {
+      "name": "练",
+      "count": 3
+    },
+    {
+      "name": "艾",
+      "count": 3
+    },
+    {
+      "name": "费",
+      "count": 3
+    },
+    {
+      "name": "桂",
+      "count": 3
+    },
+    {
+      "name": "温",
+      "count": 3
+    },
+    {
+      "name": "闵",
+      "count": 3
+    },
+    {
+      "name": "蒲",
+      "count": 3
+    },
+    {
+      "name": "祝",
+      "count": 3
+    },
+    {
+      "name": "尤",
+      "count": 3
+    },
+    {
+      "name": "窦",
+      "count": 3
+    },
+    {
+      "name": "丰",
+      "count": 3
+    },
+    {
+      "name": "阚",
+      "count": 3
+    },
+    {
+      "name": "和",
+      "count": 3
+    },
+    {
+      "name": "邰",
+      "count": 3
+    },
+    {
+      "name": "郎",
+      "count": 3
+    }
+  ],
+  "duplicateNames": [
+    {
+      "name": "王硕",
+      "count": 7
+    },
+    {
+      "name": "王浩",
+      "count": 5
+    },
+    {
+      "name": "张宇豪",
+      "count": 4
+    },
+    {
+      "name": "李硕",
+      "count": 4
+    },
+    {
+      "name": "杨帆",
+      "count": 4
+    },
+    {
+      "name": "王一鸣",
+      "count": 4
+    },
+    {
+      "name": "杨洋",
+      "count": 3
+    },
+    {
+      "name": "孙博文",
+      "count": 3
+    },
+    {
+      "name": "张涛",
+      "count": 3
+    },
+    {
+      "name": "李杰",
+      "count": 3
+    },
+    {
+      "name": "王子涵",
+      "count": 3
+    },
+    {
+      "name": "李世杰",
+      "count": 3
+    },
+    {
+      "name": "陈卓",
+      "count": 3
+    },
+    {
+      "name": "张杰",
+      "count": 3
+    },
+    {
+      "name": "张文杰",
+      "count": 3
+    },
+    {
+      "name": "王浩宇",
+      "count": 3
+    },
+    {
+      "name": "杨帅",
+      "count": 3
+    },
+    {
+      "name": "张旭阳",
+      "count": 3
+    },
+    {
+      "name": "张博",
+      "count": 3
+    },
+    {
+      "name": "刘子豪",
+      "count": 3
+    },
+    {
+      "name": "李想",
+      "count": 3
+    },
+    {
+      "name": "刘琦",
+      "count": 3
+    },
+    {
+      "name": "王子豪",
+      "count": 3
+    },
+    {
+      "name": "李冰冰",
+      "count": 3
+    },
+    {
+      "name": "王淇",
+      "count": 2
+    },
+    {
+      "name": "黄佳琪",
+      "count": 2
+    },
+    {
+      "name": "杨甜甜",
+      "count": 2
+    },
+    {
+      "name": "张扬",
+      "count": 2
+    },
+    {
+      "name": "王喆",
+      "count": 2
+    },
+    {
+      "name": "张晨宇",
+      "count": 2
+    },
+    {
+      "name": "高岩",
+      "count": 2
+    },
+    {
+      "name": "刘佳",
+      "count": 2
+    },
+    {
+      "name": "吴静",
+      "count": 2
+    },
+    {
+      "name": "刘杰",
+      "count": 2
+    },
+    {
+      "name": "王雪莹",
+      "count": 2
+    },
+    {
+      "name": "杨晴",
+      "count": 2
+    },
+    {
+      "name": "王少鹏",
+      "count": 2
+    },
+    {
+      "name": "苏雨欣",
+      "count": 2
+    },
+    {
+      "name": "李佳奇",
+      "count": 2
+    },
+    {
+      "name": "孙一鸣",
+      "count": 2
+    },
+    {
+      "name": "张可",
+      "count": 2
+    },
+    {
+      "name": "刘潍嘉",
+      "count": 2
+    },
+    {
+      "name": "王哲",
+      "count": 2
+    },
+    {
+      "name": "张志浩",
+      "count": 2
+    },
+    {
+      "name": "沈炎",
+      "count": 2
+    },
+    {
+      "name": "王晨阳",
+      "count": 2
+    },
+    {
+      "name": "刘洁",
+      "count": 2
+    },
+    {
+      "name": "马英杰",
+      "count": 2
+    },
+    {
+      "name": "李豪",
+      "count": 2
+    },
+    {
+      "name": "王猛",
+      "count": 2
+    }
+  ],
+  "topDuplicates": [
+    {
+      "name": "王硕",
+      "count": 7
+    },
+    {
+      "name": "王浩",
+      "count": 5
+    },
+    {
+      "name": "张宇豪",
+      "count": 4
+    },
+    {
+      "name": "李硕",
+      "count": 4
+    },
+    {
+      "name": "杨帆",
+      "count": 4
+    },
+    {
+      "name": "王一鸣",
+      "count": 4
+    },
+    {
+      "name": "杨洋",
+      "count": 3
+    },
+    {
+      "name": "孙博文",
+      "count": 3
+    },
+    {
+      "name": "张涛",
+      "count": 3
+    },
+    {
+      "name": "李杰",
+      "count": 3
+    },
+    {
+      "name": "王子涵",
+      "count": 3
+    },
+    {
+      "name": "李世杰",
+      "count": 3
+    },
+    {
+      "name": "陈卓",
+      "count": 3
+    },
+    {
+      "name": "张杰",
+      "count": 3
+    },
+    {
+      "name": "张文杰",
+      "count": 3
+    },
+    {
+      "name": "王浩宇",
+      "count": 3
+    },
+    {
+      "name": "杨帅",
+      "count": 3
+    },
+    {
+      "name": "张旭阳",
+      "count": 3
+    },
+    {
+      "name": "张博",
+      "count": 3
+    },
+    {
+      "name": "刘子豪",
+      "count": 3
+    },
+    {
+      "name": "李想",
+      "count": 3
+    },
+    {
+      "name": "刘琦",
+      "count": 3
+    },
+    {
+      "name": "王子豪",
+      "count": 3
+    },
+    {
+      "name": "李冰冰",
+      "count": 3
+    },
+    {
+      "name": "王淇",
+      "count": 2
+    },
+    {
+      "name": "黄佳琪",
+      "count": 2
+    },
+    {
+      "name": "杨甜甜",
+      "count": 2
+    },
+    {
+      "name": "张扬",
+      "count": 2
+    },
+    {
+      "name": "王喆",
+      "count": 2
+    },
+    {
+      "name": "张晨宇",
+      "count": 2
+    }
+  ],
+  "nameLength": {
+    "distribution": {
+      "2": 1155,
+      "3": 5541,
+      "4": 21
+    },
+    "shortest": {
+      "length": 2,
+      "names": [
+        "崔醒",
+        "李翔",
+        "刘杨",
+        "卢拓",
+        "谭茜",
+        "王淇",
+        "程俏",
+        "莫磊",
+        "谭鑫",
+        "杨洋"
+      ]
+    },
+    "longest": {
+      "length": 4,
+      "names": [
+        "唐陈怡涵",
+        "狄杨允丽",
+        "曹刘维佳",
+        "赵熊思怡",
+        "皇甫康佳",
+        "戈根都乐",
+        "许秀俊凯",
+        "李周益成",
+        "欧阳培添",
+        "丁增格来"
+      ]
+    }
+  },
+  "givenNames": {
+    "top": [
+      {
+        "name": "浩",
+        "count": 27
+      },
+      {
+        "name": "硕",
+        "count": 27
+      },
+      {
+        "name": "杰",
+        "count": 18
+      },
+      {
+        "name": "帅",
+        "count": 18
+      },
+      {
+        "name": "涛",
+        "count": 15
+      },
+      {
+        "name": "子涵",
+        "count": 15
+      },
+      {
+        "name": "子豪",
+        "count": 15
+      },
+      {
+        "name": "宇",
+        "count": 15
+      },
+      {
+        "name": "文博",
+        "count": 15
+      },
+      {
+        "name": "鑫",
+        "count": 14
+      },
+      {
+        "name": "一帆",
+        "count": 14
+      },
+      {
+        "name": "浩然",
+        "count": 14
+      },
+      {
+        "name": "俊豪",
+        "count": 13
+      },
+      {
+        "name": "昊",
+        "count": 13
+      },
+      {
+        "name": "梦瑶",
+        "count": 13
+      },
+      {
+        "name": "一鸣",
+        "count": 13
+      },
+      {
+        "name": "家乐",
+        "count": 13
+      },
+      {
+        "name": "婷婷",
+        "count": 13
+      },
+      {
+        "name": "博",
+        "count": 13
+      },
+      {
+        "name": "博文",
+        "count": 12
+      },
+      {
+        "name": "旭",
+        "count": 12
+      },
+      {
+        "name": "洋",
+        "count": 11
+      },
+      {
+        "name": "佳",
+        "count": 11
+      },
+      {
+        "name": "涵",
+        "count": 11
+      },
+      {
+        "name": "卓",
+        "count": 11
+      },
+      {
+        "name": "凯",
+        "count": 11
+      },
+      {
+        "name": "晨阳",
+        "count": 10
+      },
+      {
+        "name": "雨晴",
+        "count": 10
+      },
+      {
+        "name": "世豪",
+        "count": 10
+      },
+      {
+        "name": "宇航",
+        "count": 10
+      },
+      {
+        "name": "星宇",
+        "count": 9
+      },
+      {
+        "name": "晴",
+        "count": 9
+      },
+      {
+        "name": "豪",
+        "count": 9
+      },
+      {
+        "name": "俊杰",
+        "count": 9
+      },
+      {
+        "name": "梦婷",
+        "count": 9
+      },
+      {
+        "name": "晨",
+        "count": 9
+      },
+      {
+        "name": "超",
+        "count": 9
+      },
+      {
+        "name": "磊",
+        "count": 8
+      },
+      {
+        "name": "佳琪",
+        "count": 8
+      },
+      {
+        "name": "佳豪",
+        "count": 8
+      },
+      {
+        "name": "甜甜",
+        "count": 8
+      },
+      {
+        "name": "佳欣",
+        "count": 8
+      },
+      {
+        "name": "一凡",
+        "count": 8
+      },
+      {
+        "name": "可",
+        "count": 8
+      },
+      {
+        "name": "旭阳",
+        "count": 8
+      },
+      {
+        "name": "阳",
+        "count": 8
+      },
+      {
+        "name": "洁",
+        "count": 8
+      },
+      {
+        "name": "爽",
+        "count": 8
+      },
+      {
+        "name": "佳慧",
+        "count": 8
+      },
+      {
+        "name": "森",
+        "count": 8
+      }
+    ],
+    "topChars": [
+      {
+        "char": "宇",
+        "count": 213
+      },
+      {
+        "char": "文",
+        "count": 191
+      },
+      {
+        "char": "佳",
+        "count": 180
+      },
+      {
+        "char": "豪",
+        "count": 170
+      },
+      {
+        "char": "雨",
+        "count": 156
+      },
+      {
+        "char": "浩",
+        "count": 151
+      },
+      {
+        "char": "博",
+        "count": 150
+      },
+      {
+        "char": "子",
+        "count": 145
+      },
+      {
+        "char": "杰",
+        "count": 134
+      },
+      {
+        "char": "阳",
+        "count": 131
+      },
+      {
+        "char": "梦",
+        "count": 123
+      },
+      {
+        "char": "鑫",
+        "count": 112
+      },
+      {
+        "char": "怡",
+        "count": 105
+      },
+      {
+        "char": "家",
+        "count": 99
+      },
+      {
+        "char": "明",
+        "count": 99
+      },
+      {
+        "char": "俊",
+        "count": 97
+      },
+      {
+        "char": "涵",
+        "count": 96
+      },
+      {
+        "char": "欣",
+        "count": 94
+      },
+      {
+        "char": "晨",
+        "count": 90
+      },
+      {
+        "char": "嘉",
+        "count": 89
+      },
+      {
+        "char": "志",
+        "count": 88
+      },
+      {
+        "char": "一",
+        "count": 87
+      },
+      {
+        "char": "婷",
+        "count": 87
+      },
+      {
+        "char": "鹏",
+        "count": 86
+      },
+      {
+        "char": "洋",
+        "count": 85
+      },
+      {
+        "char": "晓",
+        "count": 81
+      },
+      {
+        "char": "凯",
+        "count": 81
+      },
+      {
+        "char": "林",
+        "count": 76
+      },
+      {
+        "char": "旭",
+        "count": 75
+      },
+      {
+        "char": "航",
+        "count": 74
+      },
+      {
+        "char": "龙",
+        "count": 68
+      },
+      {
+        "char": "涛",
+        "count": 67
+      },
+      {
+        "char": "慧",
+        "count": 67
+      },
+      {
+        "char": "昊",
+        "count": 66
+      },
+      {
+        "char": "玉",
+        "count": 66
+      },
+      {
+        "char": "帅",
+        "count": 65
+      },
+      {
+        "char": "辉",
+        "count": 65
+      },
+      {
+        "char": "硕",
+        "count": 64
+      },
+      {
+        "char": "乐",
+        "count": 64
+      },
+      {
+        "char": "思",
+        "count": 63
+      },
+      {
+        "char": "天",
+        "count": 62
+      },
+      {
+        "char": "泽",
+        "count": 60
+      },
+      {
+        "char": "金",
+        "count": 60
+      },
+      {
+        "char": "伟",
+        "count": 58
+      },
+      {
+        "char": "超",
+        "count": 56
+      },
+      {
+        "char": "星",
+        "count": 55
+      },
+      {
+        "char": "轩",
+        "count": 53
+      },
+      {
+        "char": "康",
+        "count": 53
+      },
+      {
+        "char": "飞",
+        "count": 53
+      },
+      {
+        "char": "恒",
+        "count": 52
+      }
+    ]
+  },
+  "genderChars": {
+    "male": [
+      {
+        "char": "宇",
+        "count": 175
+      },
+      {
+        "char": "豪",
+        "count": 170
+      },
+      {
+        "char": "博",
+        "count": 144
+      },
+      {
+        "char": "浩",
+        "count": 143
+      },
+      {
+        "char": "文",
+        "count": 125
+      },
+      {
+        "char": "杰",
+        "count": 124
+      },
+      {
+        "char": "子",
+        "count": 113
+      },
+      {
+        "char": "阳",
+        "count": 110
+      },
+      {
+        "char": "俊",
+        "count": 87
+      },
+      {
+        "char": "明",
+        "count": 84
+      },
+      {
+        "char": "家",
+        "count": 83
+      },
+      {
+        "char": "志",
+        "count": 82
+      },
+      {
+        "char": "鹏",
+        "count": 80
+      },
+      {
+        "char": "佳",
+        "count": 75
+      },
+      {
+        "char": "洋",
+        "count": 72
+      },
+      {
+        "char": "航",
+        "count": 72
+      },
+      {
+        "char": "凯",
+        "count": 72
+      },
+      {
+        "char": "鑫",
+        "count": 69
+      },
+      {
+        "char": "旭",
+        "count": 68
+      },
+      {
+        "char": "晨",
+        "count": 67
+      },
+      {
+        "char": "龙",
+        "count": 67
+      },
+      {
+        "char": "涛",
+        "count": 66
+      },
+      {
+        "char": "林",
+        "count": 65
+      },
+      {
+        "char": "辉",
+        "count": 63
+      },
+      {
+        "char": "昊",
+        "count": 62
+      },
+      {
+        "char": "一",
+        "count": 62
+      },
+      {
+        "char": "帅",
+        "count": 62
+      },
+      {
+        "char": "嘉",
+        "count": 60
+      },
+      {
+        "char": "硕",
+        "count": 58
+      },
+      {
+        "char": "超",
+        "count": 54
+      },
+      {
+        "char": "天",
+        "count": 54
+      },
+      {
+        "char": "泽",
+        "count": 53
+      },
+      {
+        "char": "康",
+        "count": 52
+      },
+      {
+        "char": "伟",
+        "count": 52
+      },
+      {
+        "char": "恒",
+        "count": 51
+      },
+      {
+        "char": "飞",
+        "count": 51
+      },
+      {
+        "char": "东",
+        "count": 48
+      },
+      {
+        "char": "翔",
+        "count": 47
+      },
+      {
+        "char": "涵",
+        "count": 47
+      },
+      {
+        "char": "乐",
+        "count": 46
+      },
+      {
+        "char": "成",
+        "count": 44
+      },
+      {
+        "char": "世",
+        "count": 43
+      },
+      {
+        "char": "轩",
+        "count": 42
+      },
+      {
+        "char": "永",
+        "count": 41
+      },
+      {
+        "char": "金",
+        "count": 39
+      },
+      {
+        "char": "坤",
+        "count": 37
+      },
+      {
+        "char": "雨",
+        "count": 36
+      },
+      {
+        "char": "华",
+        "count": 36
+      },
+      {
+        "char": "智",
+        "count": 36
+      },
+      {
+        "char": "峰",
+        "count": 34
+      }
+    ],
+    "female": [
+      {
+        "char": "雨",
+        "count": 120
+      },
+      {
+        "char": "佳",
+        "count": 105
+      },
+      {
+        "char": "梦",
+        "count": 93
+      },
+      {
+        "char": "怡",
+        "count": 89
+      },
+      {
+        "char": "婷",
+        "count": 87
+      },
+      {
+        "char": "欣",
+        "count": 75
+      },
+      {
+        "char": "文",
+        "count": 66
+      },
+      {
+        "char": "慧",
+        "count": 61
+      },
+      {
+        "char": "晓",
+        "count": 51
+      },
+      {
+        "char": "涵",
+        "count": 49
+      },
+      {
+        "char": "静",
+        "count": 46
+      },
+      {
+        "char": "莹",
+        "count": 44
+      },
+      {
+        "char": "鑫",
+        "count": 43
+      },
+      {
+        "char": "思",
+        "count": 43
+      },
+      {
+        "char": "雅",
+        "count": 42
+      },
+      {
+        "char": "晴",
+        "count": 42
+      },
+      {
+        "char": "瑶",
+        "count": 38
+      },
+      {
+        "char": "宇",
+        "count": 38
+      },
+      {
+        "char": "琪",
+        "count": 35
+      },
+      {
+        "char": "琳",
+        "count": 35
+      },
+      {
+        "char": "雯",
+        "count": 34
+      },
+      {
+        "char": "彤",
+        "count": 34
+      },
+      {
+        "char": "玉",
+        "count": 34
+      },
+      {
+        "char": "雪",
+        "count": 33
+      },
+      {
+        "char": "洁",
+        "count": 33
+      },
+      {
+        "char": "冰",
+        "count": 32
+      },
+      {
+        "char": "子",
+        "count": 32
+      },
+      {
+        "char": "嘉",
+        "count": 29
+      },
+      {
+        "char": "丽",
+        "count": 29
+      },
+      {
+        "char": "心",
+        "count": 28
+      },
+      {
+        "char": "悦",
+        "count": 28
+      },
+      {
+        "char": "茹",
+        "count": 27
+      },
+      {
+        "char": "艺",
+        "count": 27
+      },
+      {
+        "char": "一",
+        "count": 25
+      },
+      {
+        "char": "丹",
+        "count": 25
+      },
+      {
+        "char": "紫",
+        "count": 23
+      },
+      {
+        "char": "璐",
+        "count": 23
+      },
+      {
+        "char": "晨",
+        "count": 23
+      },
+      {
+        "char": "媛",
+        "count": 23
+      },
+      {
+        "char": "婧",
+        "count": 22
+      },
+      {
+        "char": "妍",
+        "count": 22
+      },
+      {
+        "char": "星",
+        "count": 22
+      },
+      {
+        "char": "楠",
+        "count": 21
+      },
+      {
+        "char": "阳",
+        "count": 21
+      },
+      {
+        "char": "萍",
+        "count": 21
+      },
+      {
+        "char": "冉",
+        "count": 21
+      },
+      {
+        "char": "金",
+        "count": 21
+      },
+      {
+        "char": "露",
+        "count": 20
+      },
+      {
+        "char": "钰",
+        "count": 20
+      },
+      {
+        "char": "敏",
+        "count": 20
+      }
+    ]
+  },
+  "colleges": [
+    {
+      "name": "设计学类",
+      "count": 527
+    },
+    {
+      "name": "工业软件",
+      "count": 475
+    },
+    {
+      "name": "新型平台软件",
+      "count": 325
+    },
+    {
+      "name": "行业应用软件",
+      "count": 324
+    },
+    {
+      "name": "机制自动化",
+      "count": 251
+    },
+    {
+      "name": "移动软件",
+      "count": 234
+    },
+    {
+      "name": "嵌入式软件",
+      "count": 219
+    },
+    {
+      "name": "智能物联",
+      "count": 198
+    },
+    {
+      "name": "网云",
+      "count": 194
+    },
+    {
+      "name": "电气工程",
+      "count": 193
+    },
+    {
+      "name": "能源",
+      "count": 172
+    },
+    {
+      "name": "食品科学",
+      "count": 147
+    },
+    {
+      "name": "计算机",
+      "count": 136
+    },
+    {
+      "name": "IEC软件工程",
+      "count": 122
+    },
+    {
+      "name": "自动化",
+      "count": 120
+    },
+    {
+      "name": "IEC食品科学",
+      "count": 114
+    },
+    {
+      "name": "电子科技",
+      "count": 114
+    },
+    {
+      "name": "高分子",
+      "count": 112
+    },
+    {
+      "name": "化工工艺",
+      "count": 88
+    },
+    {
+      "name": "新材器",
+      "count": 86
+    },
+    {
+      "name": "应用化学",
+      "count": 84
+    },
+    {
+      "name": "建筑电气",
+      "count": 80
+    },
+    {
+      "name": "法学",
+      "count": 75
+    },
+    {
+      "name": "数媒技术",
+      "count": 75
+    },
+    {
+      "name": "烟草工程",
+      "count": 72
+    },
+    {
+      "name": "会计学",
+      "count": 70
+    },
+    {
+      "name": "电信工程",
+      "count": 65
+    },
+    {
+      "name": "财务管理",
+      "count": 63
+    },
+    {
+      "name": "网安",
+      "count": 63
+    },
+    {
+      "name": "微电",
+      "count": 60
+    }
+  ],
+  "classStats": {
+    "totalClasses": 213,
+    "avgSize": "31.5",
+    "largest": [
+      {
+        "name": "数媒技术22-01",
+        "count": 75
+      },
+      {
+        "name": "工业软件22-04",
+        "count": 60
+      },
+      {
+        "name": "工业软件22-07",
+        "count": 60
+      },
+      {
+        "name": "工业软件22-08",
+        "count": 60
+      },
+      {
+        "name": "工业软件22-01",
+        "count": 59
+      },
+      {
+        "name": "工业软件22-02",
+        "count": 59
+      },
+      {
+        "name": "工业软件22-03",
+        "count": 59
+      },
+      {
+        "name": "工业软件22-05",
+        "count": 59
+      },
+      {
+        "name": "工业软件22-06",
+        "count": 59
+      },
+      {
+        "name": "新型平台软件22-05",
+        "count": 55
+      }
+    ],
+    "smallest": [
+      {
+        "name": "自动化类22-05",
+        "count": 1
+      },
+      {
+        "name": "自动化类22-03",
+        "count": 1
+      },
+      {
+        "name": "工商管理类22-04",
+        "count": 1
+      },
+      {
+        "name": "雕塑22-01",
+        "count": 1
+      },
+      {
+        "name": "市场营销22-02",
+        "count": 16
+      },
+      {
+        "name": "市场营销22-01",
+        "count": 18
+      },
+      {
+        "name": "朝鲜语22-01",
+        "count": 20
+      },
+      {
+        "name": "机器人工程22-02",
+        "count": 21
+      },
+      {
+        "name": "轨道信号22-01",
+        "count": 21
+      },
+      {
+        "name": "电子商务22-01",
+        "count": 21
+      }
+    ]
+  },
+  "uniqueNamesCount": 6365,
+  "uniqueNamesPercent": "94.8",
+  "interesting": {
+    "sameCharNames": [
+      "王隆隆",
+      "杨甜甜",
+      "刘冰冰",
+      "吴素素",
+      "王晶晶",
+      "肖旋旋",
+      "乐美美",
+      "冯琦琦",
+      "石辰辰",
+      "李慧慧",
+      "毛新新",
+      "韩亮亮",
+      "吴超超",
+      "程明明",
+      "郭苗苗",
+      "韩婷婷",
+      "邱婷婷",
+      "王齐齐",
+      "赵莹莹",
+      "杨果果",
+      "胡倩倩",
+      "申莹莹",
+      "时莹莹",
+      "袁悦悦",
+      "聂滢滢",
+      "姜壮壮",
+      "吴念念",
+      "杨妍妍",
+      "赵婷婷",
+      "季硕硕",
+      "焦强强",
+      "李冉冉",
+      "胡萌萌",
+      "荆楠楠",
+      "王营营",
+      "刘航航",
+      "张欣欣",
+      "高盈盈",
+      "李晴晴",
+      "喻晴晴",
+      "张茜茜",
+      "张婷婷",
+      "赵晨晨",
+      "顾莎莎",
+      "王涛涛",
+      "谷荣荣",
+      "吴萍萍",
+      "张媛媛",
+      "彭媛媛",
+      "张甜甜"
+    ],
+    "celebrityLikeNames": [
+      "兰龙",
+      "王腾",
+      "王俊杰",
+      "张一博",
+      "乔菲",
+      "贾俊杰",
+      "张龙",
+      "曹俊杰",
+      "王丽颖",
+      "胡小龙",
+      "李歌",
+      "马菲",
+      "赵菲",
+      "史俊杰",
+      "孙俊杰",
+      "余俊杰",
+      "赵俊杰",
+      "胡军",
+      "任军",
+      "尚俊杰",
+      "马歌",
+      "樊俊杰",
+      "郭英"
+    ],
+    "abccNames": [
+      "王隆隆",
+      "杨甜甜",
+      "刘冰冰",
+      "吴素素",
+      "王晶晶",
+      "肖旋旋",
+      "乐美美",
+      "冯琦琦",
+      "石辰辰",
+      "李慧慧",
+      "毛新新",
+      "韩亮亮",
+      "吴超超",
+      "程明明",
+      "郭苗苗",
+      "韩婷婷",
+      "邱婷婷",
+      "王齐齐",
+      "赵莹莹",
+      "杨果果",
+      "胡倩倩",
+      "申莹莹",
+      "时莹莹",
+      "袁悦悦",
+      "聂滢滢",
+      "姜壮壮",
+      "吴念念",
+      "杨妍妍",
+      "赵婷婷",
+      "季硕硕"
+    ],
+    "aabcNames": []
+  }
+}
