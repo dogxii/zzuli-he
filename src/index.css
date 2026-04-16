@@ -2,132 +2,114 @@
 @tailwind components;
 @tailwind utilities;
 
-/* 全局样式 */
-* {
-	box-sizing: border-box;
+@layer base {
+  html {
+    scrollbar-gutter: stable;
+  }
+
+  body {
+    @apply bg-sys-light text-slate-800 font-sans selection:bg-sys-accent selection:text-white;
+    transition: background-color 0.2s ease, color 0.2s ease;
+    /* Clean grid background for a tech feel */
+    background-image: 
+      linear-gradient(to right, rgba(0, 174, 239, 0.05) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(0, 174, 239, 0.05) 1px, transparent 1px);
+    background-size: 30px 30px;
+    background-attachment: fixed;
+  }
+  
+  .dark body {
+    @apply bg-sys-dark text-slate-200 selection:bg-sys-accent-dark selection:text-[#0B1120];
+    background-image: 
+      linear-gradient(to right, rgba(0, 195, 255, 0.03) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(0, 195, 255, 0.03) 1px, transparent 1px);
+  }
+
+  /* Reset headings to clean sans instead of serif */
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-sans font-bold tracking-tight;
+  }
 }
 
-body {
-	margin: 0;
-	font-family:
-		-apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu",
-		"Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
+@layer utilities {
+  .tech-panel {
+    @apply bg-sys-light-card dark:bg-sys-dark-card border border-sys-border dark:border-sys-border-dark relative shadow-sm;
+    transition: all 0.2s ease;
+  }
+
+  .tech-panel:hover {
+    @apply shadow-md border-sys-accent/30 dark:border-sys-accent-dark/30;
+  }
+
+  /* Arknights style clipped corners */
+  .clip-edge {
+    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 16px), calc(100% - 16px) 100%, 0 100%);
+  }
+  
+  .clip-edge-reverse {
+    clip-path: polygon(16px 0, 100% 0, 100% 100%, 0 100%, 0 16px);
+  }
+  
+  .clip-edge-both {
+    clip-path: polygon(16px 0, 100% 0, 100% calc(100% - 16px), calc(100% - 16px) 100%, 0 100%, 0 16px);
+  }
+
+  /* Tech glowing input */
+  .tech-input {
+    @apply w-full bg-sys-light dark:bg-sys-dark border-l-4 border-sys-border dark:border-sys-border-dark border-y border-r px-4 py-3 font-sans text-xl md:text-2xl focus:outline-none focus:border-l-sys-accent dark:focus:border-l-sys-accent-dark transition-all placeholder:text-slate-400 dark:placeholder:text-slate-600;
+  }
+
+  /* Tech Buttons */
+  .tech-btn {
+    @apply inline-flex items-center justify-center gap-2 px-6 py-2.5 bg-slate-800 text-white dark:bg-slate-200 dark:text-slate-900 text-sm font-bold tracking-widest uppercase hover:bg-sys-accent dark:hover:bg-sys-accent-dark dark:hover:text-[#0B1120] transition-colors relative overflow-hidden;
+  }
+  
+  .tech-btn-outline {
+    @apply inline-flex items-center justify-center gap-2 px-6 py-2.5 border border-slate-800 text-slate-800 dark:border-slate-200 dark:text-slate-200 text-sm font-bold tracking-widest uppercase hover:bg-slate-800 hover:text-white dark:hover:bg-slate-200 dark:hover:text-[#0B1120] transition-colors;
+  }
+
+  /* Tech Hazard Stripes */
+  .tech-stripes {
+    background: repeating-linear-gradient(
+      -45deg,
+      transparent,
+      transparent 10px,
+      rgba(0, 174, 239, 0.1) 10px,
+      rgba(0, 174, 239, 0.1) 20px
+    );
+  }
+  
+  .dark .tech-stripes {
+    background: repeating-linear-gradient(
+      -45deg,
+      transparent,
+      transparent 10px,
+      rgba(0, 195, 255, 0.05) 10px,
+      rgba(0, 195, 255, 0.05) 20px
+    );
+  }
+  
+  /* Scrollbar override */
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
 }
 
-/* 自定义滚动条 */
-.flex-1.overflow-x-auto::-webkit-scrollbar {
-	height: 6px;
-}
-
-.flex-1.overflow-x-auto::-webkit-scrollbar-thumb {
-	background-color: rgba(100, 116, 139, 0.5);
-	border-radius: 9999px;
-}
-
-.flex-1.overflow-x-auto {
-	scrollbar-width: thin;
-	scrollbar-color: rgba(100, 116, 139, 0.6) transparent;
-}
-
+/* Elegant Tech Scrollbar */
 ::-webkit-scrollbar {
 	width: 6px;
+	height: 6px;
 }
-
 ::-webkit-scrollbar-track {
-	background: rgba(229, 231, 235, 0.3);
+	@apply bg-sys-light dark:bg-sys-dark;
 }
-
 ::-webkit-scrollbar-thumb {
-	background: rgba(156, 163, 175, 0.5);
-	border-radius: 3px;
+	@apply bg-slate-300 dark:bg-slate-700;
 }
-
 ::-webkit-scrollbar-thumb:hover {
-	background: rgba(107, 114, 128, 0.7);
-}
-
-/* 背景模式优化 */
-@supports (backdrop-filter: blur(10px)) {
-	.backdrop-blur-sm {
-		backdrop-filter: blur(4px);
-	}
-	.backdrop-blur-md {
-		backdrop-filter: blur(12px);
-	}
-}
-
-/* 加载动画 */
-.loading-dots::after {
-	content: "";
-	animation: dots 1.5s infinite;
-}
-
-@keyframes dots {
-	0%,
-	20% {
-		content: ".";
-	}
-	40% {
-		content: "..";
-	}
-	60%,
-	100% {
-		content: "...";
-	}
-}
-
-/* 平滑过渡 */
-* {
-	scroll-behavior: smooth;
-}
-
-/* 表格样式优化 */
-.table-container {
-	background: rgba(255, 255, 255, 0.7);
-	backdrop-filter: blur(10px);
-	border: 1px solid rgba(255, 255, 255, 0.2);
-	border-radius: 16px;
-	overflow: hidden;
-}
-
-/* 响应式设计 */
-@media (max-width: 640px) {
-	html {
-		font-size: 14px;
-	}
-}
-
-/* 自定义动画 */
-@keyframes fadeIn {
-	from {
-		opacity: 0;
-		transform: translateY(20px);
-	}
-	to {
-		opacity: 1;
-		transform: translateY(0);
-	}
-}
-
-.animate-fade-in {
-	animation: fadeIn 0.5s ease-out;
-}
-
-/* 毛玻璃效果增强 */
-.glass-effect {
-	background: rgba(255, 255, 255, 0.1);
-	backdrop-filter: blur(10px);
-	border: 1px solid rgba(255, 255, 255, 0.2);
-}
-
-/* 按钮悬停效果 */
-.btn-hover-lift {
-	transition: all 0.2s ease;
-}
-
-.btn-hover-lift:hover {
-	transform: translateY(-2px);
-	box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+	@apply bg-sys-accent dark:bg-sys-accent-dark;
 }
