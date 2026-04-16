@@ -1,111 +1,136 @@
-import React from "react";
-import { ExternalLink, Code, Github, Sheet, Book, Dog } from "lucide-react";
+import { Book, Code, Dog, ExternalLink, Github, Sheet } from "lucide-react";
+import type React from "react";
 
 const ToolsPage: React.FC = () => {
-  const tools = [
-    {
-      name: "假条生成",
-      url: "https://jt.dogxi.me",
-      icon: Sheet,
-      desc: "zzuli 假条生成器 jt.dogxi.me",
-    },
-    {
-      name: "课程平台",
-      url: "https://wk.dogxi.top",
-      icon: Book,
-      desc: "低价刷课下单平台 wk.dogxi.top",
-    },
-  ];
+	const tools = [
+		{
+			name: "假条生成系统",
+			label: "LEAVE GENERATOR",
+			url: "https://jt.dogxi.me",
+			icon: Sheet,
+			desc: "zzuli 假条生成器",
+			color: "text-sys-accent dark:text-sys-accent-dark",
+		},
+		{
+			name: "课程辅助平台",
+			label: "COURSE ASSISTANT",
+			url: "https://wk.dogxi.top",
+			icon: Book,
+			desc: "一站式低价刷课下单平台",
+			color: "text-rose-500 dark:text-rose-400",
+		},
+	];
 
-  return (
-    <div className="max-w-4xl mx-auto space-y-6">
-      <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-6 text-center">
-        关于
-      </h1>
-      {/* 关于区域 */}
-      <div className="bg-white/70 dark:bg-gray-800/70 backdrop-blur-sm rounded-xl border border-white/20 dark:border-gray-700/20 p-8">
-        <div className="text-center space-y-6">
-          <div>
-            <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
-              📦 我超 盒
-            </h3>
-            <p className="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-              方便快捷查询学生信息的网页，以检验是否为本校(zzuli)学生。<br></br>
-              请勿用于非法用途。<br></br>
-              (文件采用 jsdelivr cdn 代理，无法搜索请刷新)<br></br> by Dogxi
-            </p>
-            <p className="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto"></p>
-            <p className="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto"></p>
-          </div>
+	return (
+		<div className="max-w-5xl mx-auto pb-16 animate-fade-in relative">
+			{/* Decorative backdrop */}
+			<div className="absolute top-20 right-20 w-96 h-96 border border-sys-border dark:border-sys-border-dark rounded-full -z-10 opacity-50" />
+			<div className="absolute top-40 right-10 w-72 h-72 border border-sys-accent/20 dark:border-sys-accent-dark/20 rounded-full -z-10" />
 
-          <div className="flex justify-center space-x-6">
-            <a
-              href="https://github.com/dogxii"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center space-x-2 text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors"
-            >
-              <Github className="h-5 w-5" />
-              <span>GitHub</span>
-            </a>
-            <a
-              href="https://dogxi.me/"
-              className="flex items-center space-x-2 text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors"
-            >
-              <Dog className="h-5 w-5" />
-              <span>主页</span>
-            </a>
-            <a
-              href="https://blog.dogxi.me/"
-              className="flex items-center space-x-2 text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors"
-            >
-              <Code className="h-5 w-5" />
-              <span>博客</span>
-            </a>
-          </div>
-        </div>
-      </div>
+			{/* Minimal Header */}
+			<div className="pt-8 mb-16">
+				<h1 className="text-4xl md:text-6xl font-serif font-black tracking-tight text-[#1A1A1A] dark:text-[#E5E5E5] mb-4">
+					工具与更多
+					<span className="text-sys-accent dark:text-sys-accent-dark">.</span>
+				</h1>
+				<div className="flex flex-wrap items-center gap-4 text-sm font-mono text-gray-500 uppercase tracking-widest mt-6">
+					<span>EXT_RESOURCES // ABOUT</span>
+					<span className="hidden sm:block w-8 h-px bg-gray-300 dark:bg-gray-700" />
+					<span>V1.0 REFINED</span>
+				</div>
+			</div>
 
-      {/* 工具区域 */}
-      <div>
-        <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-6 text-center">
-          其他工具
-        </h1>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          {tools.map((tool) => {
-            const Icon = tool.icon;
-            return (
-              <a
-                key={tool.name}
-                href={tool.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bg-white/70 dark:bg-gray-800/70 backdrop-blur-sm rounded-xl border border-white/20 dark:border-gray-700/20 p-6 hover:shadow-lg transition-all duration-200 group"
-              >
-                <div className="flex items-center space-x-4">
-                  <Icon className="h-8 w-8 text-blue-500 dark:text-blue-400 group-hover:text-blue-600 dark:group-hover:text-blue-300" />
-                  <div>
-                    <h3 className="font-semibold text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400">
-                      {tool.name}
-                    </h3>
-                    <p className="text-sm text-gray-600 dark:text-gray-300">
-                      {tool.desc}
-                    </p>
-                  </div>
-                  <ExternalLink className="h-4 w-4 text-gray-400 dark:text-gray-500 ml-auto" />
-                </div>
-              </a>
-            );
-          })}
-        </div>
-      </div>
+			<div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
+				{/* Left Col: About */}
+				<div className="lg:col-span-7 space-y-12">
+					<div className="editorial-card p-8 md:p-12">
+						<h2 className="font-serif font-bold text-3xl mb-8 text-[#1A1A1A] dark:text-[#E5E5E5]">
+							关于我超盒
+						</h2>
+						<div className="space-y-6 text-gray-600 dark:text-gray-400 leading-relaxed font-sans font-light text-lg">
+							<p>
+								这是一个基于公开信息构建的学生信息检索切片，致力于以最优雅的形式呈现结构化数据。
+							</p>
+							<div className="p-4 border-l-2 border-rose-500 bg-rose-50 dark:bg-rose-900/10 text-rose-600 dark:text-rose-400 font-medium text-sm my-6">
+								<p className="font-serif tracking-wide">
+									敬告：该系统仅供校内身份核验与学习交流使用。严禁将其用于任何形式的隐私侵犯或非法数据采集。
+								</p>
+							</div>
+							<p className="text-sm font-mono tracking-widest uppercase">
+								// MAINTAINER: DOGXI
+								<br />
+								// CDN_NODE: JSDELIVR
+							</p>
+						</div>
 
-      {/* 底部信息 */}
-      <div className="text-center text-sm text-gray-500 dark:text-gray-400 space-y-1">
-        <p>Built on Vercel</p>
-      </div>
-    </div>
-  );
+						{/* Quick Links */}
+						<div className="flex flex-wrap gap-4 mt-12 pt-8 border-t border-sys-border dark:border-sys-border-dark">
+							<a
+								href="https://github.com/dogxii"
+								target="_blank"
+								rel="noopener noreferrer"
+								className="editorial-btn-outline"
+							>
+								<Github className="h-4 w-4" /> GITHUB
+							</a>
+							<a href="https://dogxi.me/" className="editorial-btn-outline">
+								<Dog className="h-4 w-4" /> 主页
+							</a>
+							<a
+								href="https://blog.dogxi.me/"
+								className="editorial-btn-outline"
+							>
+								<Code className="h-4 w-4" /> 博客
+							</a>
+						</div>
+					</div>
+				</div>
+
+				{/* Right Col: Tools */}
+				<div className="lg:col-span-5 space-y-6">
+					<h2 className="font-serif font-bold text-2xl text-[#1A1A1A] dark:text-[#E5E5E5] mb-8 pb-4 border-b border-sys-border dark:border-sys-border-dark">
+						外部资源{" "}
+						<span className="font-mono text-sm font-normal text-gray-400 ml-4 uppercase tracking-widest">
+							Tools
+						</span>
+					</h2>
+
+					<div className="flex flex-col gap-6">
+						{tools.map((tool) => {
+							const Icon = tool.icon;
+							return (
+								<a
+									key={tool.name}
+									href={tool.url}
+									target="_blank"
+									rel="noopener noreferrer"
+									className="editorial-card p-6 flex items-start gap-6 group hover:border-sys-accent dark:hover:border-sys-accent-dark transition-colors"
+								>
+									<div
+										className={`p-4 rounded-2xl bg-[#FAFAFA] dark:bg-[#111111] ${tool.color}`}
+									>
+										<Icon className="h-6 w-6" />
+									</div>
+									<div className="flex-1">
+										<h3 className="font-serif font-bold text-xl text-[#1A1A1A] dark:text-[#E5E5E5] mb-1 group-hover:text-sys-accent dark:group-hover:text-sys-accent-dark transition-colors">
+											{tool.name}
+										</h3>
+										<p className="font-mono text-xs tracking-widest text-gray-400 uppercase mb-3">
+											{tool.label}
+										</p>
+										<p className="text-gray-500 font-light text-sm">
+											{tool.desc}
+										</p>
+									</div>
+									<ExternalLink className="h-4 w-4 text-gray-300 dark:text-gray-700 opacity-0 group-hover:opacity-100 transition-opacity" />
+								</a>
+							);
+						})}
+					</div>
+				</div>
+			</div>
+		</div>
+	);
 };
 
 export default ToolsPage;
