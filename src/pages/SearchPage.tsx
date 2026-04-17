@@ -848,12 +848,12 @@ const SearchPage: React.FC = () => {
 				<div className="flex flex-col md:flex-row md:items-stretch gap-0">
 					<div className="flex-1 w-full relative">
 						<div className="hidden md:block absolute left-4 top-1/2 -translate-y-1/2 z-10 pointer-events-none"><Command className="h-4 w-4 text-slate-400 dark:text-slate-500" /></div>
-						<input type="text" value={searchTerm} onChange={(event) => setSearchTerm(event.target.value)} placeholder={loadingState.isLoading ? "AWAITING..." : "ENTER ID, NAME, OR PINYIN..."} disabled={loadingState.isLoading} className="tech-input min-h-[64px] pl-4 md:pl-14 pr-4 py-4 md:py-5 border-t border-b border-l bg-white/80 dark:bg-slate-900/80 backdrop-blur w-full font-mono text-sm md:text-lg tracking-[0.2em] uppercase" />
+						<input type="text" value={searchTerm} onChange={(event) => setSearchTerm(event.target.value)} placeholder={loadingState.isLoading ? "AWAITING..." : "ENTER ID, NAME, OR PINYIN..."} disabled={loadingState.isLoading} className="tech-input min-h-[64px] h-full pl-4 md:pl-14 pr-4 py-4 md:py-5 border-t border-b border-l bg-white/80 dark:bg-slate-900/80 backdrop-blur w-full font-mono text-sm md:text-lg tracking-[0.2em] uppercase" />
 						<div className="absolute bottom-0 left-0 h-px bg-sys-accent dark:bg-sys-accent-dark w-0 group-focus-within:w-full transition-all duration-500 ease-out z-20" />
 					</div>
 
 					<div className="hidden md:block w-full md:w-44 lg:w-40 shrink-0 relative">
-						<select value={selectedGrade} onChange={(event) => setSelectedGrade(event.target.value as typeof selectedGrade)} disabled={loadingState.isLoading} className="w-full min-h-[64px] appearance-none tech-input py-4 md:py-5 pl-4 pr-12 border text-center font-mono text-xs md:text-sm tracking-widest text-slate-500 hover:text-slate-800 dark:hover:text-slate-200 bg-slate-50/80 dark:bg-slate-800/80 backdrop-blur cursor-pointer uppercase transition-colors">
+						<select value={selectedGrade} onChange={(event) => setSelectedGrade(event.target.value as typeof selectedGrade)} disabled={loadingState.isLoading} className="w-full h-full min-h-[64px] appearance-none tech-input py-4 md:py-5 pl-4 pr-12 border text-center font-mono text-xs md:text-sm tracking-widest text-slate-500 hover:text-slate-800 dark:hover:text-slate-200 bg-slate-50/80 dark:bg-slate-800/80 backdrop-blur cursor-pointer uppercase transition-colors grade-select">
 							{GRADE_OPTIONS.map((option) => <option key={option.value} value={option.value}>{option.label}</option>)}
 						</select>
 						<div className="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none border-l border-sys-border dark:border-sys-border-dark pl-3 opacity-50"><div className="w-0 h-0 border-l-[5px] border-l-transparent border-r-[5px] border-r-transparent border-t-[5px] border-t-current" /></div>
