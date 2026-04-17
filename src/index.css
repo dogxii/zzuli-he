@@ -161,6 +161,14 @@ button {
 	touch-action: manipulation;
 }
 
+/* Ensure native select arrow is fully hidden cross-browser */
+select.grade-select {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	background-image: none;
+}
+
 img {
 	-webkit-user-drag: none;
 	user-select: none;
