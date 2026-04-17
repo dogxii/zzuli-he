@@ -70,7 +70,7 @@ const VIEW_MODES: Array<{ value: ResultsViewMode; label: string }> = [
 ];
 
 const GRADE_OPTIONS: Array<{ value: Grade | "all"; label: string }> = [
-	{ value: "all", label: "ALL_YEARS [ * ]" },
+	{ value: "all", label: "ALL_YEARS" },
 	{ value: "25", label: "CLASS_25" },
 	{ value: "24", label: "CLASS_24" },
 	{ value: "23", label: "CLASS_23" },
