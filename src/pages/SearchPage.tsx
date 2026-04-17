@@ -191,10 +191,10 @@ const buildGraphData = (students: Student[]) => {
 		const ringIndex = index % perRing;
 		const itemsInRing = Math.min(perRing, classNames.length - ring * perRing);
 		const angle = (-Math.PI / 2) + (ringIndex / itemsInRing) * Math.PI * 2;
-		const radius = 280 + ring * 220;
+		const radius = 360 + ring * 280;
 		classCenterMap.set(className, {
 			x: centerX + Math.cos(angle) * radius,
-			y: centerY + Math.sin(angle) * radius * 0.8,
+			y: centerY + Math.sin(angle) * radius * 0.92,
 		});
 	});
 
@@ -343,10 +343,12 @@ const StudentNodeMesh: React.FC<{ results: Student[] }> = ({ results }) => {
 	const [activeNodeId, setActiveNodeId] = useState<string | null>(graphData.nodes[0]?.id ?? null);
 	const [hoveredNodeId, setHoveredNodeId] = useState<string | null>(null);
 	const [avatarFallbacks, setAvatarFallbacks] = useState<Record<string, true>>({});
+	const [graphSize, setGraphSize] = useState({ width: 960, height: 680 });
 	const graphRef = useRef<any>(null);
 	const imageCacheRef = useRef<Map<string, HTMLImageElement>>(new Map());
 	const loadingImageSrcRef = useRef<Set<string>>(new Set());
 	const containerRef = useRef<HTMLDivElement | null>(null);
+	const hasAutoFittedRef = useRef(false);
 
 	useEffect(() => {
 		setActiveNodeId(graphData.nodes[0]?.id ?? null);
@@ -354,7 +356,25 @@ const StudentNodeMesh: React.FC<{ results: Student[] }> = ({ results }) => {
 		setAvatarFallbacks({});
 		imageCacheRef.current.clear();
 		loadingImageSrcRef.current.clear();
+		hasAutoFittedRef.current = false;
 	}, [graphData]);
+
+	useEffect(() => {
+		const element = containerRef.current;
+		if (!element) return undefined;
+
+		const updateSize = () => {
+			const nextWidth = Math.max(320, Math.round(element.clientWidth));
+			const nextHeight = Math.max(520, Math.round(element.clientHeight));
+			setGraphSize((current) => (current.width === nextWidth && current.height === nextHeight ? current : { width: nextWidth, height: nextHeight }));
+		};
+
+		updateSize();
+		const observer = new ResizeObserver(() => updateSize());
+		observer.observe(element);
+
+		return () => observer.disconnect();
+	}, []);
 
 	useEffect(() => {
 		const preloadTargets = graphData.nodes;
@@ -380,7 +400,7 @@ const StudentNodeMesh: React.FC<{ results: Student[] }> = ({ results }) => {
 
 	useEffect(() => {
 		const graph = graphRef.current;
-		if (!graph || graphData.nodes.length === 0) return;
+		if (!graph || graphData.nodes.length === 0 || graphSize.width <= 0 || graphSize.height <= 0) return;
 		graph.d3Force("charge").strength(graphData.nodes.length > 160 ? -170 : -220);
 		graph.d3Force("link").distance((link: GraphLink) => {
 			if (link.kind === "class") return 58;
@@ -391,10 +411,18 @@ const StudentNodeMesh: React.FC<{ results: Student[] }> = ({ results }) => {
 		graph.d3Force("link").strength((link: GraphLink) => link.strength);
 		graph.d3Force("center").strength(0.08);
 		graph.d3Force("collide", forceCollide<GraphNode>((node: GraphNode) => Math.max(34, Math.min(48, 30 + node.degree * 1.9))).iterations(5).strength(1));
-		graph.d3Force("clusterX", forceX<GraphNode>((node: GraphNode) => node.clusterX).strength(0.14));
-		graph.d3Force("clusterY", forceY<GraphNode>((node: GraphNode) => node.clusterY).strength(0.14));
-		graph.zoomToFit(500, 90);
-	}, [graphData]);
+		graph.d3Force("clusterX", forceX<GraphNode>((node: GraphNode) => node.clusterX).strength(0.1));
+		graph.d3Force("clusterY", forceY<GraphNode>((node: GraphNode) => node.clusterY).strength(0.1));
+
+		if (!hasAutoFittedRef.current) {
+			hasAutoFittedRef.current = true;
+			requestAnimationFrame(() => {
+				requestAnimationFrame(() => {
+					graph.zoomToFit(500, 90);
+				});
+			});
+		}
+	}, [graphData, graphSize.height, graphSize.width]);
 
 	const nodesById = useMemo(() => new Map(graphData.nodes.map((node) => [node.id, node])), [graphData.nodes]);
 	const activeId = hoveredNodeId || activeNodeId;
@@ -497,8 +525,8 @@ const StudentNodeMesh: React.FC<{ results: Student[] }> = ({ results }) => {
 		[activeNodeId, avatarFallbacks, highlightedNodeIds, hoveredNodeId],
 	);
 
-	const graphHeight = 680;
-	const graphWidth = containerRef.current?.clientWidth || 960;
+	const graphHeight = graphSize.height;
+	const graphWidth = graphSize.width;
 	const visibleNodeCount = graphData.nodes.length;
 	const visibleLinkCount = graphData.links.length;
 
