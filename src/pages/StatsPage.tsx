@@ -216,11 +216,11 @@ const StatsPage: React.FC = () => {
 								<div className="font-mono font-medium text-base sm:text-lg tracking-widest shrink-0 border-l-2 border-sys-accent dark:border-sys-accent-dark pl-3 sm:pl-4 text-[#1A1A1A] dark:text-[#E5E5E5]">
 										{year}
 									</div>
-									<div className="flex-1">
-										<div className="h-1 bg-gray-200 dark:bg-gray-800 rounded-full relative">
+									<div className="flex-1 min-w-0">
+										<div className="h-1 bg-gray-200 dark:bg-gray-800 rounded-full relative overflow-hidden">
 											<div
 												className="absolute top-0 left-0 h-full bg-[#1A1A1A] dark:bg-[#E5E5E5] transition-all duration-1000 group-hover:bg-sys-accent dark:group-hover:bg-sys-accent-dark"
-												style={{ width: `${(data.total / stats.total) * 100 * 5}%` }}
+												style={{ width: `${Math.min((data.total / stats.total) * 100 * 5, 100)}%` }}
 											/>
 										</div>
 									</div>
